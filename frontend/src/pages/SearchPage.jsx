@@ -9,7 +9,7 @@ const SearchResults = () => {
     const [products, setProducts] = useState([]);
     const location = useLocation();
     const query = new URLSearchParams(location.search).get('query');
-    const BASE_URL = "https://backend-oncm7nr3m-prakhar-067s-projects.vercel.app";
+    const BASE_URL = "https://backend-eta-seven-18.vercel.app";
   
 
     useEffect(() => {

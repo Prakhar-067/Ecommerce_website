@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 
 const AuthPage = () => {
-    const BASE_URL = "https://backend-oncm7nr3m-prakhar-067s-projects.vercel.app";
+    const BASE_URL = "https://backend-eta-seven-18.vercel.app";
     const [isLogin, setIsLogin] = useState(true);
     const Navigate=useNavigate();
     const { login } = useAuth();

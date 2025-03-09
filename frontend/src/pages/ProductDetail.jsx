@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 const ProductDetails = () => {
-  const BASE_URL = "https://backend-oncm7nr3m-prakhar-067s-projects.vercel.app";
+  const BASE_URL = "https://backend-eta-seven-18.vercel.app";
     const navigate = useNavigate();
     const isLoggedIn = !!localStorage.getItem('authToken');  
     

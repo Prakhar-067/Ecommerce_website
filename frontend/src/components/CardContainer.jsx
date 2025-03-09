@@ -5,7 +5,7 @@ import { useState,useEffect } from 'react';
 import axios from 'axios';
 
 const CardContainer = () => {
-  const BASE_URL = "https://backend-oncm7nr3m-prakhar-067s-projects.vercel.app";
+  const BASE_URL = "https://backend-eta-seven-18.vercel.app";
 
     const [products, setProducts] = useState([]); // State to store products
     const [loading, setLoading] = useState(true); // State to manage loading state

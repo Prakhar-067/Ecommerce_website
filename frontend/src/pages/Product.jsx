@@ -6,7 +6,7 @@ import axios from 'axios';
 
 const ProductPage = () => {
     
-  const BASE_URL = "https://backend-oncm7nr3m-prakhar-067s-projects.vercel.app";
+  const BASE_URL = "https://backend-eta-seven-18.vercel.app";
   const [products, setProducts] = useState([]); // State to store products
   const [loading, setLoading] = useState(true); // State to manage loading state
   const [error, setError] = useState(null); // State to handle errors
