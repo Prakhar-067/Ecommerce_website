@@ -16,6 +16,7 @@ const ProductPage = () => {
   // useEffect to fetch products when the component loads
   useEffect(() => {
     const fetchProducts = async () => {
+      console.log("Fetching from:", `${BASE_URL}/api/products`);
       try {
         const response = await axios.get(`${BASE_URL}/api/products`);
         
