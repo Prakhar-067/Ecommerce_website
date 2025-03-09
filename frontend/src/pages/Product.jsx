@@ -6,7 +6,7 @@ import axios from 'axios';
 
 const ProductPage = () => {
     
-
+  const BASE_URL = "https://backend-oncm7nr3m-prakhar-067s-projects.vercel.app";
   const [products, setProducts] = useState([]); // State to store products
   const [loading, setLoading] = useState(true); // State to manage loading state
   const [error, setError] = useState(null); // State to handle errors
@@ -17,7 +17,7 @@ const ProductPage = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/api/products');
+        const response = await axios.get(`${BASE_URL}/api/products`);
         
         setProducts(response.data); // Set the products state with the data from the response
         setFilteredProducts(response.data);

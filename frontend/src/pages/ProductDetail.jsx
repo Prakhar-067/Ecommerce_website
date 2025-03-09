@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 const ProductDetails = () => {
+  const BASE_URL = "https://backend-oncm7nr3m-prakhar-067s-projects.vercel.app";
     const navigate = useNavigate();
     const isLoggedIn = !!localStorage.getItem('authToken');  
     
@@ -15,7 +16,7 @@ const ProductDetails = () => {
 
   useEffect(() => {
     const fetchProduct = async () => {
-      const { data } = await axios.get(`http://localhost:8000/api/products/${id}`);
+      const { data } = await axios.get(`${BASE_URL}/api/products/${id}`);
       setProduct(data);
     };
     fetchProduct();
@@ -71,7 +72,7 @@ const ProductDetails = () => {
   return (
     <div className="product-detail-container">
       <div className="product-image-container">
-        <img src={`http://localhost:8000/${product.image}`} alt={product.name} className="product-image" />
+        <img src={`${BASE_URL}/${product.image}`} alt={product.name} className="product-image" />
       </div>
       <div className="product-info-container">
         <h1 className="product-title">{product.name}</h1>

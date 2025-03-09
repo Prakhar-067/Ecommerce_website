@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 
 const AuthPage = () => {
+    const BASE_URL = "https://backend-oncm7nr3m-prakhar-067s-projects.vercel.app";
     const [isLogin, setIsLogin] = useState(true);
     const Navigate=useNavigate();
     const { login } = useAuth();
@@ -19,7 +20,7 @@ const AuthPage = () => {
     const handleLogin = async (credentials) => {
         try {
             // Make an API call to your backend for login
-            const response = await axios.post('http://localhost:8000/api/users/login', credentials);
+            const response = await axios.post(`${BASE_URL}/api/users/login`, credentials);
             
             // Assuming the response contains a token
             const { data } = response;
@@ -41,7 +42,7 @@ const AuthPage = () => {
     // This function will handle the signup logic (optional)
     const handleSignup = async (credentials) => {
         try {
-            const response = await axios.post('http://localhost:8000/api/users/register', credentials);
+            const response = await axios.post(`${BASE_URL}/api/users/register`, credentials);
             const { data } = response;
             
             console.log('Signup successful! Data:', data);

@@ -9,12 +9,13 @@ const SearchResults = () => {
     const [products, setProducts] = useState([]);
     const location = useLocation();
     const query = new URLSearchParams(location.search).get('query');
+    const BASE_URL = "https://backend-oncm7nr3m-prakhar-067s-projects.vercel.app";
   
 
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const response = await axios.get(`http://localhost:8000/api/products/search?query=${query}`);
+                const response = await axios.get(`${BASE_URL}/api/products/search?query=${query}`);
                 setProducts(response.data);
             } catch (error) {
                 console.error("Error fetching search results:", error);

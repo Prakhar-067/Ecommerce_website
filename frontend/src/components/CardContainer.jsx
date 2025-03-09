@@ -5,6 +5,7 @@ import { useState,useEffect } from 'react';
 import axios from 'axios';
 
 const CardContainer = () => {
+  const BASE_URL = "https://backend-oncm7nr3m-prakhar-067s-projects.vercel.app";
 
     const [products, setProducts] = useState([]); // State to store products
     const [loading, setLoading] = useState(true); // State to manage loading state
@@ -14,7 +15,7 @@ const CardContainer = () => {
     useEffect(() => {
       const fetchProducts = async () => {
         try {
-          const response = await axios.get('http://localhost:8000/api/products');
+          const response = await axios.get(`${BASE_URL}/api/products`);
           setProducts(response.data); // Set the products state with the data from the response
           setLoading(false); // Set loading to false once the data is fetched
         } catch (err) {
