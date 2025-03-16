@@ -3,7 +3,7 @@ import './Card.css';
 import { Link } from 'react-router-dom';
 
 const Card = ({ product }) => {
-    const BASE_URL = "https://backend-eta-seven-18.vercel.app";
+    const BASE_URL = "https://ecommerce-website-1-lnw9.onrender.com";
     return (
         <div className="card">
             <img src={`${BASE_URL}/${product.image}`} alt={product.title} className="card-image" />
